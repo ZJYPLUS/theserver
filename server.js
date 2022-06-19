@@ -1,7 +1,9 @@
 //引入express
 const express = require('express')
+const history = require('connect-history-api-fallback');
 
 const app = express()
+app.use(history())
 // 用于指定静态资源
 app.use(express.static(__dirname+'/static'))
 
