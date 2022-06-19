@@ -1,9 +1,12 @@
 //引入express
 const express = require('express')
+//用于解决路由模式为history造成刷新服务端404的问题
 const history = require('connect-history-api-fallback');
 
 const app = express()
+//应用connect-history-api-fallback
 app.use(history())
+
 // 用于指定静态资源
 app.use(express.static(__dirname+'/static'))
 
